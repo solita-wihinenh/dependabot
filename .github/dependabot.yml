@@ -1,0 +1,16 @@
+# Edits to this file need to be pushed to master for it to have effect
+# Github checks this file only in master branch
+# Even if you specify any other target-branch, it will still need to be pushed to master
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    # `package.json` and `lock` file location
+    directory: "/"
+    schedule:
+      # First day of every month
+      interval: "monthly"
+      # UTC time to check updates
+      time: "10:00"
+    target-branch: "master"
+    reviewers:
+      - "solita-wihinenh"
